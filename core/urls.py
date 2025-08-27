@@ -8,6 +8,10 @@ urlpatterns = [
     path('voice/users/today', views.voice_today),
     path('voice/users/by-date', views.voice_by_date),
 
+    # per-channel aggregates
+    path('voice/channels/today', views.voice_channels_today),
+    path('voice/channel/<str:channel_id>/users/today', views.voice_channel_users_today),
+
     path('voice/user/<str:user_id>/today', views.voice_user_today),
     path('voice/user/<str:user_id>/history', views.voice_user_history),
     path('voice/user/<str:user_id>/total', views.voice_user_total),
@@ -17,9 +21,5 @@ urlpatterns = [
     path('messages/user/<str:user_id>/history', views.messages_user_history),
     path('messages/user/<str:user_id>/total', views.messages_user_total),
 
-    path('user/<str:user_id>/today', views.user_today),
-
-    path('export.xlsx', views.export_xlsx),         
-    path('export/xlsx', views.export_xlsx),       
-    path('export/today.xlsx', views.export_xlsx_today),
+    path('export.xlsx', views.export_xlsx)
 ]

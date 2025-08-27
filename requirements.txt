@@ -5,3 +5,5 @@ pytz
 asgiref
 openpyxl
 django-cors-headers
+gspread
+google-auth
